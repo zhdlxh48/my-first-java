@@ -87,7 +87,7 @@ Arrays.toString(array); // 배열의 문자열 표현
 
 이 것은 배열만의 문제는 아님
 
-참조(레퍼런스)타입의 변수를 복사할 때, 대입 연산자를 사용하게 되면 변수의 주소를 복사해서 대입하게 됨
+참조(레퍼런스)타입의 변수를 복사할 때, 대입 연산자를 사용하게 되면 변수의 주소를 복사해서 대입하게 되는 **얕은복사**가 됨
 
 배열을 온전히 복사하기 위해서는 **깊은복사**를 사용해야 함
 
@@ -108,7 +108,7 @@ System.out.println(testArray2);
 System.out.println(testArray3);
 
 // Result: testArray - [I@27716f4, testArray2 - [I@8efb846, testArray3 - [I@27716f4
-// testArray와 testArray3는 같은 주소를 가리키고 있음
+// testArray와 testArray3는 **얕은복사**로 인해 같은 주소를 가리키고 있음
 // testArray2는 testArray의 **깊은 복사본**이기 때문에 다른 고유한 주소를 가리키고 있음
 ```
 
