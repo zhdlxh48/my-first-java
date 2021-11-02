@@ -2,7 +2,7 @@ package Chapter5;
 
 import java.util.Arrays;
 
-public class Chapter5 {
+public class MainClass {
   public static void main(String[] args) {
     int[] intArray = new int[4];
     intArray[0] = 1;

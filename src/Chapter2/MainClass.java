@@ -1,6 +1,6 @@
 package Chapter2;
 
-public class Chapter2 {
+public class MainClass {
   public static void main(String[] args) {
     byte b = 1;
     System.out.println(b);
