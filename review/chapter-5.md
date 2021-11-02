@@ -36,7 +36,7 @@ type[] arrayName = new type[size]; // 배열의 사이즈를 지정해 생성
 
 // 배열을 생성할 때 값을 지정해 값의 개수만큼의 크기의 배열을 생성
 type[] arrayName = new type[] {value1, value2, ..., valueN};
-type[] arrayName = {value1, value2, ..., valueN}; 
+type[] arrayName = {value1, value2, ..., valueN};
 ```
 
 ## 배열의 메모리
@@ -49,7 +49,7 @@ int[] array = new int[10]; // 배열의 사이즈는 10개
 
 위와 같은 경우 배열의 사이즈는 10개이므로, 메모리에는 10개의 int 값을 가지는 배열을 생성함
 
-int는 4byte의 메모리를 가지므로, 배열의 데이터 크기는 4byte * 10 = 40byte가 됨
+int는 4byte의 메모리를 가지므로, 배열의 데이터 크기는 4byte \* 10 = 40byte가 됨
 
 ## 배열 변수
 
@@ -91,7 +91,7 @@ Arrays.toString(array); // 배열의 문자열 표현
 
 배열을 온전히 복사하기 위해서는 **깊은복사**를 사용해야 함
 
-깊은복사를 위한 방법에는 ***Arrays.copyOf()*** 메소드가 있음
+깊은복사를 위한 방법에는 **_Arrays.copyOf()_** 메소드가 있음
 
 ```Java
 int[] testArray = {4, 1, 5, 3, 2};
@@ -138,9 +138,9 @@ System.out.println(array[1][2]); // 6
 
 위의 코드에서 볼 수 있듯이 2차원 배열은 1차원 배열 안에 또 다른 배열을 가리키는 형태이고, 아래와 같이 저렇게 표로 나타낼 수 있음
 
-| 1 | 2 | 3 |
-|---|---|---|
-| 4 | 5 | 6 |
+| 1   | 2   | 3   |
+| --- | --- | --- |
+| 4   | 5   | 6   |
 
 이렇게 [2][3]의 형태로 되어있는 배열은 2행, 3열의 배열로 볼 수 있음
 
