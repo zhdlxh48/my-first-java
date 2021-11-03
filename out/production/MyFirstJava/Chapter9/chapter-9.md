@@ -49,8 +49,54 @@ ClassType variable2 = new ClassType();
 - null은 동적 할당된 객체가 없을 때 사용되는 값
 - 어떠한 메모리 주소도 가리키지 않는 값
 - null을 참조 변수에 담았을 때 이 변수를 통해 메모리에 접근하려 시도하면 오류가 발생함
+  - 해당 오류는 NullPointerException이라는 예외를 발생시킴
 
 ```Java
-ClassType variable = null;
-System.out.println(variable);
+public class TestClass {
+  public void getInfo() {
+    System.out.println("This is test info");
+  }
+}
+
+...
+
+TestClass nullVar = new TestClass();
+nullVar.getInfo(); // Result: This is test info
+nullVar = null;
+nullVar.getInfo(); // Result: NullPointerException
+// Cannot invoke "...TestClass.getInfo()" because "nullVar" is null
 ```
+
+### GC
+
+GC: Garbage Collector
+
+- 자바에서는 메모리 관리를 위해 자바에서 제공하는 가비지 컬렉터를 사용함
+- 참조변수를 사용하지 않게되면 GC가 자동으로 실행됨
+- GC를 실행하는 시점을 직접 조절할 수는 없음
+  - 자바의 내부적으로 참조가 되지않는 객체, 즉 참조 카운트가 0이 된 객체는 GC의 대상이 됨
+
+#### 참조 카운트
+
+Reference Counting
+
+```Java
+[1] TestClass obj1 = new TestClass();
+[2] TestClass obj2 = new TestClass();
+[3] obj1 = obj2;
+```
+
+1. obj1에 참조된 인스턴스는 참조 카운트가 1이 됨
+
+- obj1에 new 키워드로 메모리에 객체가 동적할당됨
+
+2. obj2에 참조된 인스턴스는 참조 카운트가 1이 됨
+
+- obj2에 new 키워드로 메모리에 객체가 동적할당됨
+
+3. obj1에 참조되고 있었던 인스턴스는 참조 카운트가 0이 됨
+
+- obj1에 obj2의 참조주소를 담았기 때문에 원래 참조하고 있었던 인스턴스는 아무도 참조하지 않게 되어 참조 카운트가 0이 됨
+- GC의 대상이 됨
+
+프로그램 종료 시점에 obj1과 obj2가 참조하고 있는 인스턴스만 참조 카운트가 1이 되어 GC가 진행되어있지 않음
