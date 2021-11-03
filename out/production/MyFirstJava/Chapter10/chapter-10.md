@@ -114,3 +114,11 @@ protected void finalize() throws Throwable {
   super.finalize();
 }
 ```
+
+상단의 함수가 GC가 실행되는 시점에서 작동하는 함수임
+
+```
+Warn) finalize method는 java ver 9 이후로 deprecated 처리됨
+퍼포먼스 이슈, 멀티스레딩 데드락 등의 이유가 있다고 함
+```
+[(참고문서)](https://cr.openjdk.java.net/~iris/se/11/latestSpec/api/java.base/java/lang/Object.html#finalize())
