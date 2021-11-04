@@ -104,3 +104,11 @@
 - 2021/11/3 [완료]
 - public, private, protected, default 제한자에 대해 알아본다
   - private inner class에 대해 알아보고 사용법에 대해 알아본다
+
+### 14. 데이터 은닉
+
+- 2021/11/4 [완료]
+- private 변수의 사용 이유에 대해 알아본다
+- getter, setter 메서드에 대해 알아본다
+
+### 15. 상속
