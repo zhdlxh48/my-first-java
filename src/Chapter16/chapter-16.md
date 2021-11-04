@@ -1,8 +1,6 @@
 # 여러가지 클래스
 
-## 내부 클래스
-
-1. 내부 클래스
+## 1. 내부 클래스
 
 - 내부 클래스, Non-Static Nested Class
 
@@ -32,7 +30,19 @@ public class MainClass {
   - OuterClass.class
   - OuterClass$InnerClass.class
 
-2. 정적 클래스 (static class)
+### 내부 클래스의 단점
+
+내부 클래스는 항상 외부 클래스를 참조하고 있음
+
+하지만 그 참조는 숨겨져 있음(숨김참조)
+
+항상 외부 클래스를 참조하고 있다는 것은 GC가 참조로 인해 제대로 작동하지 않을 수 있다는 의미
+
+그로인해 메모리 공간의 불필요하게 차지하는 공간이 늘어나므로, 내부 클래스보단 정적 중첩 클래스를 사용하는 것을 권장함
+
+[(참고자료)](https://siyoon210.tistory.com/141)
+
+## 2. 정적 클래스 (static class)
 
 - 정적 중첩 클래스, Static Nested Class 
 
@@ -54,7 +64,7 @@ public class MainClass {
 }
 ```
 
-3. 지역 클래스 (local class)
+## 3. 지역 클래스 (local class)
 
 메소드 내부에 정의된 클래스를 말함
 
@@ -73,7 +83,7 @@ public class OuterClass {
   - OuterClass.class
   - OuterClass$'Index'InnerClass.class
 
-4. 익명 클래스 (anonymous class)
+## 4. 익명 클래스 (anonymous class)
 
 - 익명클래스는 인스턴스 변수명이 존재하지 않음
 - new 와 동시에 부모클래스를 상속받아 내부에서 오버라이딩해서 사용함
@@ -100,19 +110,7 @@ public class OuterClass {
 [(참고자료1)](http://www.tcpschool.com/java/java_usingClass_innerClass)
 [(참고자료2)](https://sjh836.tistory.com/145)
 
-### 내부 클래스의 단점
-
-내부 클래스는 항상 외부 클래스를 참조하고 있음
-
-하지만 그 참조는 숨겨져 있음(숨김참조)
-
-항상 외부 클래스를 참조하고 있다는 것은 GC가 참조로 인해 제대로 작동하지 않을 수 있다는 의미
-
-그로인해 메모리 공간의 불필요하게 차지하는 공간이 늘어나므로, 내부 클래스보단 정적 중첩 클래스를 사용하는 것을 권장함
-
-[(참고자료)](https://siyoon210.tistory.com/141)
-
-## 추상 클래스
+## 5. 추상 클래스
 
 클래스의 공통된 부분의 형태만을 만들고, 이를 상속해서 사용함
 
@@ -130,7 +128,7 @@ abstract class AbstractClass {
 public class TestClass extends AbstractClass {
   @Override
   public void method() { ... }
-}
+}1
 ```
 
 특징
