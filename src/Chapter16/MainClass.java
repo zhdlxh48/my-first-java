@@ -1,6 +1,7 @@
 package Chapter16;
 
 import Chapter16.Classes.AnonymousClass;
+import Chapter16.Classes.InheritClass;
 import Chapter16.Classes.InnerClass;
 import Chapter16.Classes.StaticClass;
 
@@ -22,5 +23,8 @@ public class MainClass {
                 System.out.println("Override Anonymous Class");
             }
         }.method();
+
+        InheritClass inherit = new InheritClass();
+        inherit.method();
     }
 }
