@@ -103,6 +103,14 @@ public class MainClass {
 
 ## protected
 
+protected 키워드가 붙은 메소드, 속성, 변수는 같은 패키지 내부에서만 자유롭게 사용이 가능함
+
+그 외에 protected 키워드를 사용하는 경우, 상속을 통해 상속받은 클래스에서도 자유롭게 사용이 가능함
+
+그 경우 상속받은 클래스에서는 new 키워드를 통한 protected 클래스의 생성자 호출은 불가능함
+
+super을 통한 상속받은 클래스의 생성자를 호출할 수 있음
+
 ```Java
 // package: com.example.Protected
 public class ProtectedClass {
