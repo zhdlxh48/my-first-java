@@ -59,3 +59,5 @@ StringBuffer, StringBuilder를 생성할 때, 버퍼의 크기를 초기에 정�
 
 - 잦은 문자열 수정이 필요하다면 StringBuffer, StringBuilder가 유리
 - 일시적인 문자열 수정, 문자열 수정이 없는 경우 String이 유리
+
+[(참고블로그)](https://coding-factory.tistory.com/546)
