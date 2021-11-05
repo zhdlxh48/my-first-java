@@ -143,3 +143,10 @@
 - 람다식에 대해 알아본다
   - 람다식의 형태와 사용에 대해 알아본다
   - @FunctionalInterface 어노테이션에 대해 알아본다
+
+### 19. 문자열 클래스
+
+- 2021/11/5 [완료]
+- String과 StringBuilder, StringBuffer에 대해 알아본다
+  - StringBuilder, StringBuffer의 차이점에 대해 알아본다
+- String을 사용할 때에 대해 알아본다
