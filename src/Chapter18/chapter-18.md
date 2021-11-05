@@ -57,3 +57,5 @@ MyInterface myInterface = (a, b) -> a + b;
 
 - @FunctionalInterface 어노테이션을 사용해야 함 (권장)
 - 인터페이스에는 하나의 추상함수만 있어야 함
+
+[(참고 블로그)](https://mangkyu.tistory.com/113)
