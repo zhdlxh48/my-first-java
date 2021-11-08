@@ -150,3 +150,18 @@
 - String과 StringBuilder, StringBuffer에 대해 알아본다
   - StringBuilder, StringBuffer의 차이점에 대해 알아본다
 - String을 사용할 때에 대해 알아본다
+
+### 20. Collection Framework
+
+- 2021/11/8 [완료]
+
+- Collection Framework를 사용하는 이유에 대해 알아본다
+- Collection 인터페이스에 대해 알아본다
+  - Collection 인터페이스를 구현한 List, Map 클래스에 대해 알아본다
+
+- Queue 인터페이스 및 이를 구현한 Queue 클래스들에 대해 알아본다
+- Map 인터페이스 및 이를 구현한 Map 클래스들에 대해 알아본다
+
+### 21. 예외처리
+
+- 2021/11/8 [미완]

@@ -369,5 +369,7 @@ for (var key :
   - 데이터의 추가, 제거 등 기본 동작 속도가 매우 빠름
 - NavigableMap 인터페이스를 기존의 이진 검색 트리의 성능을 향상시킨 레드-블랙 트리(Red-Black tree)로 구현
 
-[(참고자료)](http://www.tcpschool.com/java/java_collectionFramework_list)
+[(참고자료1)](http://www.tcpschool.com/java/java_collectionFramework_list)
+
+[(참고자료2)](https://velog.io/@foeverna/Java-콜렉션프레임워크-Map-인터페이스)
 
