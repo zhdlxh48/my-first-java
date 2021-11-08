@@ -43,3 +43,12 @@ public class MainClass {
 }
 ```
 Q: static 블록에서 출력되는 값 중 static_num이 200으로 나오는데 static 블록이 static 변수의 대입 시점보다 빠른데 어떻게 가능한지?
+
+3. Collection Type
+
+```java
+LinkedList<int> testList1 = new LinkedList<int>(); // Can not use
+LinkedList<Integer> testList2 = new LinkedList<Integer>(); // Can use
+```
+
+Q: 왜 Primitive타입은 Syntax Error가 뜨고, Wrapper 타입은 정상적으로 작동하는지? 
