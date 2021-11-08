@@ -52,4 +52,89 @@ IndexOutOfBoundException, // 배열에서 존재하지 않는 인덱스에 접�
 SystemException
 ```
 
+## 예외처리
+
+```java
+try {
+  // 예외가 발생할 수 있는 코드
+} catch (Exception e) {
+  // 예외가 발생했을 때 처리할 코드
+} final {
+  // 예외 발생 여부에 상관없이 try 블럭을 실행 한 이후에 실행됨
+}
+```
+
+### Try-Catch 블럭
+
+Exception 및 RuntimeException의 하위 클래스를 이용하여 다양한 예외처리가 가능함
+
+```java
+Scanner scanner = new Scanner(System.in);
+
+try {
+  System.out.println("input i : ");
+  int i = scanner.nextInt();
+  System.out.println("input j : ");
+  boolean j = scanner.nextBoolean();
+  int[] iArr = {1, 2, 3, 4, 5};
+  for (int k = 0; k < 6; k++) {
+    System.out.println("iArr[" + k + "] : " + iArr[k]);
+  }
+  LinkedList list = null;
+  System.out.println("list.size() : " + list.size());
+} catch (InputMismatchException e) {
+  e.printStackTrace();
+} catch (ArrayIndexOutOfBoundsException e) {
+  e.printStackTrace();
+} catch (Exception e) {
+  e.printStackTrace();
+}
+```
+
+### Finally
+
+예외 발생에 상관 없이 try 블럭을 실행한 후 무조건 실행됨
+
+```java
+int result = 0;
+
+try {
+  result = 10 / 0; // 0으로 나눔으로써 예외 발생
+} catch (Exception e) {
+  e.printStackTrace();
+  String msg = e.getMessage();
+  System.out.println("Exception: " + msg);
+  // 
+} finally {
+  System.out.println("Final Block");
+}
+
+/*
+Final Block // try블럭을 실행한 후 finally 블럭으로 이동해 실행
+java.lang.ArithmeticException: / by zero
+	at Chapter21.MainClass.main(MainClass.java:8)
+Exception: / by zero
+*/
+```
+
+### Throws
+
+예외가 발생할 시 함수에서 직접 처리하지 않고 함수를 호출한 곳으로 예외를 넘김
+
+```java
+public static void main(String[] args) {
+  try {
+    ExceptionMethod();
+  } catch (Exception e) {
+    e.printStackTrace();
+    System.out.println("Exception: " + e.getMessage());
+    // Exception: / by zero
+  }
+}
+
+public static void ExceptionMethod() throws Exception {
+  int result = 10 / 0;
+}
+```
+
 [(참고블로그)](https://www.nextree.co.kr/p3239/)
